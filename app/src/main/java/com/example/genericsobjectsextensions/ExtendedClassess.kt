@@ -19,6 +19,30 @@ class QuizExtended {
         var total: Int = 10
         var answered: Int = 3
     }
+//Start from this line below is lesson for Scope functions using let() and apply()
+//Start from this line below is lesson for Scope functions let() and apply()
+//Start from this line below is lesson for Scope functions let() and apply()
+
+    fun printQuiz() {
+        question1.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+        println()
+        question2.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+        println()
+        question3.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+        println()
+    }
 }
 
 val QuizExtended.StudentProgress.progressText: String
@@ -35,4 +59,7 @@ fun QuizExtended.StudentProgress.printProgressBar() {
 fun main() {
     println(QuizExtended.progressText)
     QuizExtended.printProgressBar()
+    QuizExtended().apply {
+        printQuiz()
+    }
 }
